@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "UTEHY Lite",
+  "version": "1.0.0",
+  "description": "Một tiện ích mở rộng cho trang web sinh viên UTEHY.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "key": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDOZzFtTUIkJm6G+gIjfK2cYolMN6Xy54FRezJJarn8N1glNmmKsIJt+tJL1EckDk+4X7lETl98+O15TLkf24ezMippP7TytJksj6IIwhhG5tC9MWoCMH76iIQ8gON4j18B71TWgmdffnJsGHgK95ycSIvgwQbWtG9d70EPFIvPB/KZKMO+GmDXKPfyU8wbECuP6/0GwZXDGcrExMiQZBddy53JYDAyijaZWAtqo0EkUapUMDqwgYp8EaBJ0NmNkTiqFZaq58qfiG+OfizyuMxLhMh0oNZKNt8s6DIPEFkjJsNSAx5V1LGhJASr/VkOfX/En1W9//Z4fZ03yVHcw10RAgMBAAECggEAARBbDJ2nBm4Q1p03AeKKt8Tj6+R0+5rK0rYOjCkNXYgkRpZiPX7LsjO0r9jDPMczjQyZ7hACWtNp+w5xGbqFQi6BbmcPsJIEdf4lNIdLz+e/Dod7exiTLMIHN1qCnFEApaun8grHFpKrzu0beRLG1ISdxC6ramHX4McoLjgw3UtJdU2/MzRfFvyGnQ1wJhzBHzCMgkL1AA5EaKKizSMYOTrCAp0D7F/Kw8JGALjMa0D9HIyuOTSWQIaJaGd6YVCbxnGTnyABFNnPAOhUoPO7Ph7V+3SWOk8vNhhat4qkBWhCWLQaSMSV6ZT8axAcMa0Blf2N4fYYvQtfD1G6f18xgQKBgQDz/0uK9k5hdYJbfjaOAJzzVA4e4X4CcsO7HuV3wpeCJEsueaFj033Y+cQMSsBwbm43P3MCVKp7UCceCgU9onSuc4pWf8XBN+CtjBvGSQcu0glTP4B6ifEw+PRflXm6m+rr7lKfWuNj2qTU4B5nuCtQ9yFXkuq0rCLFc0WYrXnrcQKBgQDYjneww+lUeL2AgHP89GZ0KoSGUUlFdTml9kuF8KIPeWJcYQ0ESDE0biSLU7zRIklPxU2iCVaDOWFZeetOhhjJqb3UITpXZzD5BRluozCYDOfFZrZKnDHALdcKZuBweYG02iOnWUPa5mG3Hde3i9lc4rtIsp/aJFk/h8u1fOd7oQKBgFngx6X3luXFkHA9bMEgLrBfXRg4/d7PAZSTC/nyfzbcQalr+mw4QppDXtkcTAjeVNEbGTVZlLb5zn79N/L9PbfpLaMxS9ohyCyFeNGwoum3SuIUeTIqT+M3QWVYPU/lEUM5Ncwnga2No7walnikWahocCq/Hp/Q7LoI/TEBbfCxAoGADUYGPhZ0CdJwwxycf2e3k+07PERlOlWqF+sVy/ro5AvrpH/qXVXTdkQ+BzA1xZfVaIdOb90kqVxuBB799k0v3cSCtyrmOY9AqDLQ0UA9bUR1PFtEVyRlxELLCH8vyJUaByzLvKkzCIrQeHnizARNaW0YT6drNuK9ebBoIxKp2aECgYBAQvS587EbED7mcdpJ3KbARnhkB4Lyv63D+zgnokr0LH/C6PyLcpSsdEZCT2nYucC7/3ykfvxGqyXbL5wNBE0jC39qXYMzx8h+O4PQJMnKKmDjko4zRhMHVzLFgIzIFdHA2kvWr6KFF2/nS8Z0Xh1CjSQvnShRC0JAYTXLf98uwg==",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://qldaotao.utehy.edu.vn/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "host_permissions": ["https://qldaotao.utehy.edu.vn/*"]
+}
